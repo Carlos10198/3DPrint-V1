@@ -1,0 +1,18 @@
+{
+    "name": "carlos/sistema-financeiro",
+    "description": "Aplicação Web para controle de empresa",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Carlos\\SistemaFinanceiro\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Carlos Bueno"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

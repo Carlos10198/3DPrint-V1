@@ -1,0 +1,13 @@
+# Dependências
+sistemaFinanceiro/vendor/
+
+# Ambiente
+sistemaFinanceiro/.env
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+sistemaFinanceiro/storage/logs/*.log
+sistemaFinanceiro/storage/cache/*
