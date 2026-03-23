@@ -1,6 +1,10 @@
 # Dependências
 sistemaFinanceiro/vendor/
 
+# Bootstrap Icons
+sistemaFinanceiro/public/bootstrap-icons/
+sistemaFinanceiro/public/icons/
+
 # Ambiente
 sistemaFinanceiro/.env
 
