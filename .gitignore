@@ -15,3 +15,5 @@ Thumbs.db
 # Logs
 sistemaFinanceiro/storage/logs/*.log
 sistemaFinanceiro/storage/cache/*
+
+sistemaFinanceiro/node_modules/

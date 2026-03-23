@@ -1,0 +1,55 @@
+/*#00e5c8 text
+
+#00a896 btn*/
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-3d, .login-sistemaInterno, .login-ponto {
+    color: #00e5c8;
+}
+
+.login-bemVindo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+}
+
+.btnLogin {
+    background-color: #00a896;
+
+    &:hover{
+        background-color: #00bfa8;
+    }
+}
+
+
+.form-switch .form-check-input:checked {
+    background-color: #00a896;
+    border-color: #00e5c8;
+}
+
+.form-switch .form-check-input:focus {
+    border-color: #00e5c8;
+    box-shadow: 0 0 0 0.25rem rgba(0, 229, 200, 0.25);
+    outline: none;
+}
+
+.left {
+    border-right: 0.5px ridge #00e5c8;
+}
+
+.right {
+    position: relative;
+    overflow: hidden;
+    background: #f5fbf8;
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
