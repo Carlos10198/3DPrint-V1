@@ -8,16 +8,38 @@
                 <p class="login-3d fs-5"> 3D PRINTING & LASER</p>
                 <h1 class="login-bemVindo mb-5 d-flex align-items-center justify-content-center ">Bem-vindo<strong class="login-ponto">.</strong></h1>
                 
-                <form action="" method="">
+                <!-- mensagem de erro — só aparece se $erro não estiver vazio -->
+                <?php if (!empty($erro)): ?>
+                    <div class="alert alert-danger py-2">
+                        <?= htmlspecialchars($erro) ?>
+                    </div>
+                <?php endif; ?>
+
+                <!-- mensagem de sucesso — só aparece se $sucesso não estiver vazio -->
+                <?php if (!empty($sucesso)): ?>
+                    <div class="alert alert-success py-2">
+                        <?= htmlspecialchars($sucesso) ?>
+                    </div>
+                <?php endif; ?>
+
+                <form action="/login" method="POST">
+
+                <!-- token CSRF — proteção contra ataques externos -->
+                    <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?? '' ?>">
+
+
                     <div class="mb-3">
                         <label class="form-label fs-5">Usuário</label>
-                        <input type="text" class="form-control py-2 fs-6">
+                        <input type="text"  name="usuario" class="form-control py-2 fs-6"  
+                            value="<?= htmlspecialchars($usuario ?? '') ?>"
+                            required
+                            autofocus>
                     </div>
 
                     <div class="mb-3 position-relative">
                         <label class="form-label fs-5">Senha</label>
                             <div class="position-relative">
-                                <input type="password" name="senha" id="senhaInput" class="form-control py-2 fs-6">
+                                <input type="password" name="senha" id="senhaInput" class="form-control py-2 fs-6" required>
                                 <i class="bi bi-eye-slash position-absolute" 
                                 style="right: 12px; top: 50%; transform: translateY(-50%); cursor: pointer; font-size: 1.2rem;"
                                 onclick="eyesPassword()"></i>

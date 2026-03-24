@@ -1,12 +1,13 @@
 <?php
 session_start();
 
+require_once __DIR__ . '/../vendor/autoload.php';
+
 require_once __DIR__ . '/../config/db.php';
 
-// captura o html da view em memória
-ob_start();
-require_once __DIR__ . '/../resources/views/auth/login.php';
-$conteudo = ob_get_clean();
+// gera token CSRF para proteger os formulários, só gera se ainda não existir na sessão
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
 
-// injeta no layout base
-require_once __DIR__ . '/../resources/views/layouts/base.php';
+require_once __DIR__ . '/../routes/web.php';
